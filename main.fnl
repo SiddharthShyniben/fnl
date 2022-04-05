@@ -1,0 +1,6 @@
+def(answer)(random(0, 100))
+loop(break => switch(ordering.compare(compose(number, prompt)('Guess a number between 0 and 100', answer))
+    .case(ordering.Equal, compose(break, print, 'You got it!'))
+    .case(ordering.GreaterThan, compose(print, 'Too high!'))
+    .case(ordering.LessThan, compose(print, 'Too low!'))
+    .default(print('Invalid input'))))
